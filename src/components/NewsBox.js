@@ -68,24 +68,32 @@ const NewsBox = (props) => {
           <div className="row">
             {articles.map((element) => {
               return (
-                <div
-                  className="col-md-4"
-                  key={element.url}
-                >
-                  <NewsItem
-                    title={element.title ? element.title.slice(0, 40) : ""}
-                    description={
-                      element.description
-                        ? element.description.slice(0, 80)
-                        : ""
-                    }
-                    imageUrl={element.urlToImage}
-                    newsUrl={element.url}
-                    date={element.publishedAt}
-                    author={element.author}
-                    source={element.source.name}
-                  />
-                </div>
+                <>
+                  {element.urlToImage && (
+                    <div
+                      className="col-md-4"
+                      key={element.url}
+                    >
+                      {
+                        <NewsItem
+                          title={
+                            element.title ? element.title.slice(0, 40) : ""
+                          }
+                          description={
+                            element.description
+                              ? element.description.slice(0, 80)
+                              : ""
+                          }
+                          imageUrl={element.urlToImage}
+                          newsUrl={element.url}
+                          date={element.publishedAt}
+                          author={element.author}
+                          source={element.source.name}
+                        />
+                      }
+                    </div>
+                  )}
+                </>
               );
             })}
           </div>

@@ -35,7 +35,7 @@ const App = () => {
         />
         <NavBar mode={mode} toggleMode={toggleMode} />
         <Routes>
-          <Route path='/' element={<NewsBox mode={mode} toggleMode={toggleMode} setProgress={setProgress} apiKey={apiKey} key='general' pageSize={pageSize} country="in" category="general" />}></Route>
+          <Route path='/' element={<NewsBox mode={mode} toggleMode={toggleMode} setProgress={setProgress} apiKey={apiKey} key='general' pageSize={pageSize} country="in" category="" />}></Route>
           <Route path='/business' element={<NewsBox mode={mode} toggleMode={toggleMode} setProgress={setProgress} apiKey={apiKey} key='business' pageSize={pageSize} country="in" category="business" />}></Route>
           <Route path='/entertainment' element={<NewsBox mode={mode} toggleMode={toggleMode} setProgress={setProgress} apiKey={apiKey} key='entertainment' pageSize={pageSize} country="in" category="entertainment" />}></Route>
           <Route path='/general' element={<NewsBox mode={mode} toggleMode={toggleMode} setProgress={setProgress} apiKey={apiKey} key='general' pageSize={pageSize} country="in" category="general" />}></Route>
