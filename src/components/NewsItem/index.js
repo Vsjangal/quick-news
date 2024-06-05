@@ -1,7 +1,8 @@
 export const card = {
   borderRadius: "15px",
-  backgroundColor: "rgb(41, 47, 51)",
-  color: "#fff",
+  backgroundColor: "#fff",
+  color: "#000",
+  height: "600px",
  };
 
 export const img = {
@@ -22,5 +23,10 @@ export const btn = {
 };
 
 export const text = {
-  color: "#b6b4b4",
+  color: "#000",
 };
+
+export const cardbody = {
+  
+};
+

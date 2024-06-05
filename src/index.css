@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
-  background-color: rgb(36, 39, 41) !important;
+  background-color: #080838 !important;
 }
 
 ::-webkit-scrollbar {

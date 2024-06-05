@@ -3,12 +3,12 @@ export const details = {
 };
 
 export const summarry = {
-  color: "#f5f5f5",
+  color: "#000",
   fontSize: "15px",
 };
 
 export const text = {
-  color: "#6c757d",
+  color: "#000",
   marginBottom: "3px",
   marginTop: "4px",
   fontSize: "12px",

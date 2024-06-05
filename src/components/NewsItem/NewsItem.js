@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Button, Card } from "react-bootstrap";
 import Details from "./Details/Details";
-import { card, img, btn, text } from "./index";
+import { card, img, btn, text, cardbody } from "./index";
 import "./style.css"
 
 function NewsItem(props) {
@@ -12,7 +12,7 @@ function NewsItem(props) {
     <>
       <Card style={card} >
         <Card.Img style={img} variant="top" src={imageUrl} alt={alt} />
-        <Card.Body>
+        <Card.Body style={cardbody}>
           <Card.Title>{title}</Card.Title>
           <Card.Text style={text}>{description}</Card.Text>
           <Details channel={channel} published={published} />
