@@ -26,7 +26,7 @@ export const searchForm = {
 };
 
 export const formInput = {
-  borderRadius: "6px",
+  borderRadius: "12px",
   padding: "11px",
   marginLeft: "13px",
 };
@@ -36,10 +36,10 @@ export const logo = {
 };
 
 export const btnColor = {
-  backgroundColor: "#005abb",
-  color: "white",
+  backgroundColor: "white",
+  color: "#080838",
   fontWeight: "700",
-  borderRadius: "6px",
+  borderRadius: "12px",
   padding: "8px 15px",
   borderColor: "#323762b7",
   fontSize: "20px",

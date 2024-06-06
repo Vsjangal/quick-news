@@ -22,3 +22,7 @@ export const card = {
   marginTop: "10px",
   marginBottom: "50px",
 };
+
+export const cardstyle = {
+  justifyContent: "center"
+}

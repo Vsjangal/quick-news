@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Col, Row } from "react-bootstrap";
 import { header } from "../../config/config";
 import { endpointPath } from "../../config/api";
-import { Container, Header, card } from "./index";
+import { Container, Header, card, cardstyle } from "./index";
 
 function News(props) {
   const { newscategory, country } = props;
@@ -48,7 +48,7 @@ function News(props) {
         <>
           <Header>{header(capitaLize(category))}</Header>
           <Container>
-            <Row>
+            <Row style={cardstyle}>
               {articles.map((element) => {
                 return (
                   <Col sm={12} md={6} lg={4} xl={3} style={card} key={uuidv4()}>

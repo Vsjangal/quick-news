@@ -7,7 +7,6 @@ export const searching = "Searching...";
 
 export const navs = [
   { nav: "Home", page: "/" },
-  { nav: "General", page: "/categories/general" },
   { nav: "Business", page: "/categories/business" },
   { nav: "Sports", page: "/categories/sports" },
   { nav: "Science", page: "/categories/science" },
@@ -18,12 +17,6 @@ export const navs = [
 
 export const router = [
   { path: "/", key: "general", category: "general", country: "us" },
-  {
-    path: "/categories/general",
-    key: "general",
-    category: "general",
-    country: "us",
-  },
   {
     path: "/categories/business",
     key: "business",

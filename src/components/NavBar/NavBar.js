@@ -1,6 +1,13 @@
 import React, { useRef, useState } from "react";
 import { IoCloseOutline } from "react-icons/io5";
-import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
+import {
+  Button,
+  Form,
+  FormControl,
+  Nav,
+  Navbar,
+  NavDropdown,
+} from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
@@ -42,8 +49,15 @@ function NavBar() {
         fixed="top"
         expanded={!isCollapsed}
       >
-        <Navbar.Brand style={navBrand} href="/">
-          <img src={logoImage} alt="Logo" style={logo} />
+        <Navbar.Brand
+          style={navBrand}
+          href="/"
+        >
+          <img
+            src={logoImage}
+            alt="Logo"
+            style={logo}
+          />
           {navbarBrand}
         </Navbar.Brand>
         {isCollapsed && (
@@ -62,17 +76,44 @@ function NavBar() {
           />
         )}
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav style={nav} className="mr-auto" onClick={handleNavClick}>
-            {navs.map((navItem) => (
-              <LinkContainer to={navItem.page} key={uuidv4()}>
-                <Nav.Link className="ml-2">{navItem.nav}</Nav.Link>
-              </LinkContainer>
-            ))}
+          <Nav
+            style={nav}
+            className="mr-auto"
+            onClick={handleNavClick}
+          >
+            {navs.map((navItem, index) =>
+              index < 3 ? (
+                <LinkContainer
+                  to={navItem.page}
+                  key={uuidv4()}
+                >
+                  <Nav.Link className="ml-2">{navItem.nav}</Nav.Link>
+                </LinkContainer>
+              ) : index === 3 ? (
+                <NavDropdown
+                  title="Other Categories"
+                  id="nav-dropdown"
+                  key={uuidv4()}
+                >
+                  {navs.slice(3).map((item) => (
+                    <LinkContainer
+                      to={item.page}
+                      key={uuidv4()}
+                    >
+                      <NavDropdown.Item>{item.nav}</NavDropdown.Item>
+                    </LinkContainer>
+                  ))}
+                </NavDropdown>
+              ) : null
+            )}
           </Nav>
-          <Form style={searchForm} onSubmit={handleSubmit}>
+          <Form
+            style={searchForm}
+            onSubmit={handleSubmit}
+          >
             <FormControl
               type="text"
-              placeholder="Explore news..."
+              placeholder="Search news..."
               style={formInput}
               className="form-control-lg bg-dark mt-lg-2 mt-md-2 mt-sm-2 mt-xl-0 text-white shadow-sm border-dark"
               value={searchQuery}
