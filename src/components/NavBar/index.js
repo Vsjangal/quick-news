@@ -33,6 +33,8 @@ export const formInput = {
 
 export const logo = {
   width: "45px",
+  borderRadius: "50px",
+  marginRight: "10px",
 };
 
 export const btnColor = {

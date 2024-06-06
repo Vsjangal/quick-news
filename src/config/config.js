@@ -1,7 +1,7 @@
 import moment from "moment";
 
-export const navbarBrand = "Your News";
-export const header = (category) => `News - Top ${category} Headlines`;
+export const navbarBrand = "Quick News";
+export const header = (category) => `Top ${category} Headlines`;
 export const noFound = "No Results Found";
 export const searching = "Searching...";
 
@@ -16,7 +16,7 @@ export const navs = [
 ];
 
 export const router = [
-  { path: "/", key: "general", category: "general", country: "us" },
+  { path: "/", key: "general", category: "", country: "us" },
   {
     path: "/categories/business",
     key: "business",

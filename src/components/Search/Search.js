@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 import { Col, Row } from "react-bootstrap";
 import { header, noFound, searching } from "../../config/config";
 import { Container, Header, card } from "./index";
+import { cardstyle } from "../News";
 
 function Search() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -48,7 +49,7 @@ function Search() {
             {totalArticles === 0 ? noFound : header(capitaLize(searchQuery))}
           </Header>
           <Container>
-            <Row>
+            <Row style={cardstyle}>
               {articles?.articles?.map((element) => {
                 return (
                   <Col sm={12} md={6} lg={4} xl={3} style={card} key={uuidv4()}>
